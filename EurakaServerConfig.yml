@@ -16,3 +16,26 @@ eureka:
     fetch-registry: true
   server:
     enable-self-preservation: true
+    
+    
+---    
+    
+
+spring:
+  profiles:
+    active: mars12301     
+  application:
+    name: eureka-rigister-server
+ 
+eureka:
+  instance:
+    instance-id: server1:${server.port}
+    perfer-ip-address: true
+    ip-address: server1
+  client:
+    service-url:
+      defaultZone: http://server1:12301/eureka/,http://server2:12302/eureka/
+    register-with-eureka: false
+    fetch-registry: true
+  server:
+    enable-self-preservation: true
