@@ -1,0 +1,20 @@
+server:
+  port: 12309
+spring:
+  application:
+    name: ZUULDemo
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://server1:12301/eureka,http://server2:12302/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${server.port}
+    hostname: server1
+logging:
+  level:
+    com.ds: DEBUG
+info:
+  app:
+    name: ZUUL测试
+    java: 1.7
