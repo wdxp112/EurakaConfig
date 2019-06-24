@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: mars-12302     
+    active: mars12302     
   application:
     name: eureka-rigister-server
  
