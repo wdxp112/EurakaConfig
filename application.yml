@@ -6,10 +6,12 @@ spring:
 
 spring:
   profiles: dev
-  application: dev-demo
+  application: 
+    name: dev-demo
 
 ---
 
 spring:
   profiles: test
-  application: test-demo
+  application: 
+    name: test-demo
